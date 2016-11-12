@@ -10,7 +10,7 @@ html, body {
 	width: 100%;
 }
 
-#app-container {
+#app-container, #app-window {
 	height: 100%;
 	width: 100%;
 }
@@ -21,8 +21,52 @@ html, body {
 	text-align: center;
 }
 
+.nav-links {
+	text-align: center;
+	margin-bottom: 1%;
+	padding: 0 1% 0 1%;
+	color: #2f4073;
+}
+
+.nav-button {
+	border-radius: 5px;
+	background-color: white;
+	font-size: 1.5vw;
+	width: 100%;
+}
+
+.nav-button:hover {
+	background-color: #ccc;
+	font-weight: bold;
+}
+
+.nav-button a {
+	color: #2f4073;
+}
+
+.nav-button a:hover {
+	text-decoration: none;
+}
+
 #top-banner {
-	height: 20%;
+	background-color: #2f4073;
+	height: 100%;
+	color: white;
+	padding-top: 3%;
+}
+
+#profile-icons a {
+	color: white;
+}
+
+#profile-icons a:hover {
+	color: #ccc;
+}
+
+.nav-links {
+	text-align: center;
+	margin-bottom: 1%;
+	color: #2f4073;
 }
 
 #profile-pic {
@@ -46,12 +90,69 @@ html, body {
 
 #profile-icons {
 	text-align: center;
+	margin-bottom: 3%;
 }
 
 /***************** MAIN WINDOW STYLING *********************/
 
+.content-window {
+	padding: 0 0 0 0;
+}
+
+.content-section {
+	padding: 0 1% 1% 1%;
+	margin: 0 0 0 0;
+}
+
+.content-sectionB {
+	margin-bottom: 3%;
+	padding: 0 1% 1% 1%;
+}
+
+.color-main {
+	background: rgba(22, 38, 86, 0.91);
+	color: white;
+}
+
+.color-light {
+	background: rgba(121, 134, 172, 0.93);
+	color: white;
+}
+
+.color-light a {
+	color: white;
+	text-decoration: underline;
+}
+
+.color-light a:hover {
+	color: #2f4073;
+}
+
+.colorC {}
+
+.colorD {}
+
+.heading {
+	text-align: center;
+	border-bottom: 1px solid black;
+	padding: 0 0 0.5% 0;
+}
+
+.heading-white {
+	text-align: center;
+	border-bottom: 1px solid white;
+	padding: 0 0 0.5% 0;
+}
+
+.content {
+	text-align: center;
+}
+
 #app-body {
 	overflow: auto;
+	background-image: url("http://core0.staticworld.net/images/article/2015/08/virtual_reality_football_headset_gloves_primary-100602296-primary.idge.jpg");
+	background-size: 100% 100%;
+	height: 100%;
 }
 
 /******************** MOBILE STYLING ***********************/
@@ -59,7 +160,7 @@ html, body {
 @media screen and (max-height: 450px) and (max-width: 767px) {
 
 	#top-banner {
-		height: 100%;
+		height: auto;
 	}
 
 	#title {
@@ -70,7 +171,14 @@ html, body {
 		font-size: 8vw;
 	}
 
-	#app-body {
-		overflow: visible;
+	.nav-button {
+		font-size: 5vw;
 	}
+
+	#app-body {
+		height: auto;
+		overflow: visible;
+		padding: 0 0 0 0;
+	}
+
 }

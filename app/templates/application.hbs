@@ -1,5 +1,5 @@
-<div id="app-container" class="container-fluid">
-	<div id="app-window" class="row">
+<div id="app-container" class="container-fluid" style="padding-right: 0px; padding-left: 0px">
+	<div id="app-window" class="row" style="margin-left: 0px; margin-right: 0px">
 		<div id="top-banner" class="col-xs-12 col-sm-3">
 			<div class="container-fluid">
 				<div id="banner-content" class="row">
@@ -18,10 +18,25 @@
 							<i class="fa fa-github-square fa-5x" aria-hidden="true"></i>
 						</a>
 					</div>
+					<div class="col-xs-12 col-sm-4 nav-links">
+						<div class="nav-button">
+							{{#link-to 'index'}}Home{{/link-to}}
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 nav-links">
+						<div class="nav-button">
+							{{#link-to 'portfolio'}}Portfolio{{/link-to}}
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 nav-links">
+						<div class="nav-button">
+							{{#link-to 'interests'}}Interests{{/link-to}}
+						</div>
+					</div>
 				</div>		
 			</div>	
 		</div>
-		<div id="app-body" class="col-xs-12 col-sm-9">
+		<div id="app-body" class="col-xs-12 col-sm-9" style="padding: 0 0 0 0">
 		{{outlet}}
 		</div>
 	</div>
