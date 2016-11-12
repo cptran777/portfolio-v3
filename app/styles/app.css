@@ -1,0 +1,76 @@
+/********************* WINDOW SIZER ************************/
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+.ember-application > .ember-view {
+	height: 100%;
+	width: 100%;
+}
+
+#app-container {
+	height: 100%;
+	width: 100%;
+}
+
+/****************** TOP BANNER STYLING *********************/
+
+.profile {
+	text-align: center;
+}
+
+#top-banner {
+	height: 20%;
+}
+
+#profile-pic {
+	width: 50%;
+	border-radius: 50%;
+}
+
+#profile-banner {
+	text-align: center;
+}
+
+#title {
+	font-family: Impact, Charcoal, sans-serif;
+	text-decoration: underline;
+	font-size: 2.4vw;
+}
+
+#subtitle {
+	font-size: 1.9vw;
+}
+
+#profile-icons {
+	text-align: center;
+}
+
+/***************** MAIN WINDOW STYLING *********************/
+
+#app-body {
+	overflow: auto;
+}
+
+/******************** MOBILE STYLING ***********************/
+
+@media screen and (max-height: 450px) and (max-width: 767px) {
+
+	#top-banner {
+		height: 100%;
+	}
+
+	#title {
+		font-size: 10vw;
+	}
+
+	#subtitle {
+		font-size: 8vw;
+	}
+
+	#app-body {
+		overflow: visible;
+	}
+}
