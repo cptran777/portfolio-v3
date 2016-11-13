@@ -1,4 +1,3 @@
-import Ember from 'ember';
+import base from './base'
 
-export default Ember.Route.extend({
-});
+export default base;

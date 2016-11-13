@@ -273,6 +273,12 @@ html, body {
 	margin-bottom: 3%;
 }
 
+/****************** INTERESTS STYLING **********************/
+
+.tech-interests {
+	padding: 0 0 0 0;
+}
+
 /******************** MOBILE STYLING ***********************/
 
 @media screen and (max-height: 450px) and (max-width: 767px) {
