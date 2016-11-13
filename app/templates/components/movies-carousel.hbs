@@ -1,1 +1,37 @@
+{{#carousel-container transition-interval=400}}
+
+	{{#carousel-body}}
+		{{#carousel-item}}
+			<img src="http://media2-starag.startv.in/r1/thumbs/PCTV/84/8184/PCTV-8184-hd.jpg" alt="Game of Thrones" class="carousel-img">
+		{{/carousel-item}}
+
+		{{#carousel-item}}
+			<img src="http://vignette3.wikia.nocookie.net/scrubs/images/b/b4/Season_5_iTunes_Artwork.jpg/revision/latest?cb=20090329210541" alt="Scrubs" class="carousel-img">
+		{{/carousel-item}}
+
+		{{#carousel-item}}
+			<img src="http://vignette1.wikia.nocookie.net/lotr/images/8/87/Ringstrilogyposter.jpg/revision/latest?cb=20070806215413" alt="Lord of the Rings" class="carousel-img">
+		{{/carousel-item}}
+
+		{{#carousel-item}}
+			<img src="http://www.technobuffalo.com/wp-content/uploads/2015/01/silicon-valley-cast-shot.jpg" alt="Silicon Valley" class="carousel-img">
+		{{/carousel-item}}
+
+		{{#carousel-item}}
+			<img src="https://i.ytimg.com/vi/48fKIXlxaXk/maxresdefault.jpg" alt="Avengers" class="carousel-img">
+		{{/carousel-item}}
+
+	{{/carousel-body}}
+
+	{{#carousel-arrow direction="left" tagName="div" class="left carousel-control"}}
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	{{/carousel-arrow}}
+	{{#carousel-arrow direction="right" tagName="div" class="right carousel-control"}}
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	{{/carousel-arrow}}
+
+{{/carousel-container}}
+
 {{yield}}
