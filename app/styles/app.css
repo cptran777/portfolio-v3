@@ -303,7 +303,7 @@ html, body {
 
 /******************** MOBILE STYLING ***********************/
 
-@media screen and (max-height: 450px) and (max-width: 767px) {
+@media screen and (max-height: 520px) and (max-width: 767px) {
 
 	#top-banner {
 		height: auto;
