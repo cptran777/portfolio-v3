@@ -42,6 +42,7 @@ html, body {
 
 .nav-button a {
 	color: #2f4073;
+	text-decoration: none;
 }
 
 .nav-button a:hover {
@@ -142,18 +143,39 @@ html, body {
 	color: white;
 }
 
+.color-secondary a {
+	color: white;
+	text-decoration: underline;
+}
+
+.color-secondary a:hover {
+	color: #aaaacd;
+}
+
 .color-secondary-faded {
-	background: rgba(36, 96, 104, 0.73);
+	/*background: rgba(36, 96, 104, 0.73);*/
+	background: rgba(71, 49, 120, 0.3);
 	color: white;
 }
 
 .color-tertiary {
-	background: rgba(164, 55, 65, 0.93);
+	/*background: rgba(164, 55, 65, 0.93);*/
+	background: rgba(71, 49, 120, 0.93);
 	color: white;
 }
 
+.color-tertiary a {
+	color: white;
+	text-decoration: underline;
+}
+
+.color-tertiary a:hover {
+	color: #aaaacd;
+}
+
 .color-tertiary-light {
-	background: rgba(205, 103, 113, 0.93);
+	/*background: rgba(205, 103, 113, 0.93);*/
+	background: rgba(121, 134, 172, 0.93);
 	color: white;
 }
 
@@ -167,6 +189,7 @@ html, body {
 	text-align: center;
 	border-bottom: 1px solid white;
 	padding: 0 0 0.5% 0;
+	color: white;
 }
 
 .heading-white a {
@@ -175,6 +198,7 @@ html, body {
 }
 
 .heading-white a:hover {
+	color: white;
 	text-decoration: underline;
 }
 
@@ -214,6 +238,11 @@ html, body {
 	width: 45%;
 }
 
+.icon-fill {
+	background-color: white;
+	border-radius: 5px;
+}
+
 .project-img {
 	width: 50%;
 	border-radius: 5px;
@@ -234,6 +263,14 @@ html, body {
 	margin-bottom: 3%;
 	border-radius: 15px;
 	padding-top: 1%;
+}
+
+/******************* PROJECTS STYLING **********************/
+
+.gallery-img {
+	width: 65%;
+	border-radius: 15px;
+	margin-bottom: 3%;
 }
 
 /******************** MOBILE STYLING ***********************/
@@ -260,6 +297,7 @@ html, body {
 		height: auto;
 		overflow: visible;
 		padding: 0 0 0 0;
+		background-size: auto;
 	}
 
 	.mobile-skill-adjust-down {

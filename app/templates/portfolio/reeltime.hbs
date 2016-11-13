@@ -1,1 +1,52 @@
+<div class="container-fluid content-window">
+	<div class="row content-section">
+		<h2 class="heading-white">Reel Time</h2>
+	</div>
+	<div class="row content-section" style="text-align: center">
+		<img src="/assets/images/ReelTime.png" class="project-img"/>
+	</div>
+	<div class="row content-section color-tertiary">
+		<h3 class="heading-white">Description</h3>
+		<p class="content">Reel Time is a P2P video streaming platform where groups can watch videos together. A host sends a link to receiver clients and creates a network between all participants to receive a video stream. The application also allows movie watchers in the group to video chat or communicate through text chat while they share the experience.</p>
+	</div>
+	<div class="row content-section color-light">
+		<h3 class="heading">Tech Stack</h3>
+		{{reeltime-techstack}}
+	</div>
+	<div class="row content-section color-main">
+		<h3 class="heading-white">Technical Details</h3>
+		<h4 class="heading-white">Front End</h4>
+		<p class="content">The front end of Reel Time is built using the React framework. Its lightweight view-only package allowed the team to easily build out the application component by component and connect these to websockets and the WebRTC code. </p>
+		<h4 class="heading-white">Making a Connection</h4>
+		<p class="content">The meat of the application lies in the structure for peer-to-peer networking in order to make the video calls and stream video. </p>
+		<p class="content">There were two viable structures to form a multi-peer network. The first was a mesh formation, meaning that every client would form a data channel between itself and every other client in the system. The second is a star formation in which one "host" creates a connection with every other client in the system. The advantage of a star formation is that all communication goes to the host and then is redirected to the appropriate other clients. However, this requires the host to handle a large amount of connections and data transfer on its own and would normally require a very powerful processor on the host side. THe mesh formation solves this by sharing the load between all clients. One client can communicate directly with another without going through the host, but this leads to a much bigger amount of connections required and can lead to a messy multi-peer system.</p>
+		<div class="row content-section" style="text-align: center">
+			<div class="col-xs-12 col-md-6" style="text-align: center">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/NetworkTopology-FullyConnected.png" style="width: 45%"/>
+				<p>Mesh Network Structure</p>
+			</div>
+			<div class="col-xs-12 col-md-6" style="text-align: center">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/StarNetwork.svg/220px-StarNetwork.svg.png" style="width: 45%"/>
+				<p>Star Network Structure</p>
+			</div>
+		</div>
+		<p class="content">The Reel Time solution mixed the ideas of both formations to best fit the needs of the application. There were two kinds of connections that had to be formed for the application, one for the actual movie streaming and one for the video chat. For video streaming, the star formation was an appropriate method because movie streaming could happen as a unidirectional flow of data. That means the host did not have to handle incoming streams between clients. </p>
+		<p class="content">A user uploads a fragmented mp4 file that is then broken into "chunks" and these chunks can be sent as packets to be attached to the HTML5 video component on each receiver client. A link from the host can be sent to receivers containing the domain name and the key that Reel Time's server can use to identify and make the handshake connections between clients.</p>
+		<p class="content">Considerations were made for the kind of structure for the video chat. Since video chat is two way data flow, a host would have to have a lot of processing power to handle a star network structure. Since the connections are expected to be made by typical consumer clients, a host is not expected to have a lot of power. A mesh formation was decidedly the best option. Creation of the mesh formation piggybacks off of the star formation. A host still exists as the central node for this formation and a star is formed first with each new node as receiver clients join the network. The host keeps track of the connections it has made and sends this information to each new client, which then triggers that client to form the data connections with each other node in the network in order to make the video stream connections.</p>
+	</div>
+	<div class="row content-section color-tertiary">
+		<h3 class="heading-white">Gallery</h3>
+		<div class="col-xs-12 col-md-6" style="text-align: center">
+			<img src="/assets/images/ReelTime-Gal-1.png" class="gallery-img"/>
+		</div>
+		<div class="col-xs-12 col-md-6" style="text-align: center">
+			<img src="/assets/images/ReelTime-Gal-2.png" class="gallery-img"/>
+		</div>
+	</div>
+	<div class="row content-section color-light" style="text-align: center">
+		<h3 class="heading-white">Github</h3>
+		<a href="https://github.com/tryreeltime/tryreeltime">https://github.com/tryreeltime/tryreeltime</a>
+	</div>
+</div>
+
 {{outlet}}
